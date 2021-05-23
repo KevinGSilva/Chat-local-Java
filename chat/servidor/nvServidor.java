@@ -29,7 +29,7 @@ public class nvServidor extends Thread {
 
 
 
-   	//MÈtodo construtor
+   	//M√©todo construtor
 	
 public nvServidor(Socket con){
    this.con = con;
@@ -45,7 +45,7 @@ public nvServidor(Socket con){
 }
 
 	
-   //MÈtodo run
+   //M√©todo run
 
 public void run(){
 
@@ -74,7 +74,7 @@ public void run(){
 
 
 
-   //MÈtodo usado para enviar mensagem para todos os clients
+   //M√©todo usado para enviar mensagem para todos os clients
  
 public void sendToAll(BufferedWriter bwSaida, String msg) throws  IOException
 {
@@ -90,14 +90,14 @@ public void sendToAll(BufferedWriter bwSaida, String msg) throws  IOException
 }
 
 	
-   	//MÈtodo main
+   	//M√©todo main
 	
 public static void main(String []args) {
 
 
   try{
-    //Cria os objetos necess·rios para inst‚nciar o servidor
-    JLabel lblMessage = new JLabel("Informe a porta: ");
+    //Cria os objetos necess√°rios para inst√¢nciar o servidor
+    JLabel lblMessage = new JLabel("Utilize a porta padr√£o ou digite uma nova: ");
     JTextField txtPorta = new JTextField("");
     Object[] texts = {lblMessage, txtPorta };
     JOptionPane.showMessageDialog(null, texts);
@@ -110,7 +110,7 @@ public static void main(String []args) {
 
 
      while(true){
-       System.out.println("Aguardando conex„o...");
+       System.out.println("Aguardando conex√£o...");
        Socket con = server.accept();
        System.out.println("Cliente conectado...");
        Thread t = new nvServidor(con);
@@ -122,5 +122,5 @@ public static void main(String []args) {
 
     e.printStackTrace();
   }
- }// Fim do mÈtodo main
+ }// Fim do m√©todo main
 } //Fim da classe
