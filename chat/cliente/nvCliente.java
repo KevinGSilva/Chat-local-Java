@@ -23,7 +23,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
-//Classe que estende JFrame para criação gráfica do chat
+//Classe que estende JFrame para criaÃ§Ã£o grÃ¡fica do chat
 public class nvCliente extends JFrame implements ActionListener, KeyListener {
 
 	private static final long serialVersionUID = 1L;
@@ -55,7 +55,7 @@ public class nvCliente extends JFrame implements ActionListener, KeyListener {
     	JLabel lblMessage = new JLabel("Verificar!");
     	txtIP = new JTextField("127.0.0.1");
     	JLabel lblChave = new JLabel("Insira a porta:");
-    	txtPorta = new JTextField("");
+    	txtPorta = new JTextField("52500");
     	JLabel lblnomeCliente = new JLabel("Insira seu nome:");
     	txtNome = new JTextField("");
     	Object[] texts = {lblMessage, lblChave, txtPorta, lblnomeCliente, txtNome };
@@ -113,7 +113,7 @@ public class nvCliente extends JFrame implements ActionListener, KeyListener {
     	 setContentPane(pnlContent);
     	 
     	
-    	 //Função para movimentação da janela utilizando um Label  
+    	 //FunÃ§Ã£o para movimentaÃ§Ã£o da janela utilizando um Label  
     	 lbl_mover = new JLabel("");
     	 lbl_mover.addMouseListener(new MouseAdapter() {
     	 	@Override
@@ -157,7 +157,7 @@ public class nvCliente extends JFrame implements ActionListener, KeyListener {
     	 setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	/*
-    Método usado para conectar no server socket.
+    MÃ©todo usado para conectar no server socket.
   */
 	public void conectar() throws IOException{
 
@@ -168,12 +168,12 @@ public class nvCliente extends JFrame implements ActionListener, KeyListener {
   	bfw.write(txtNome.getText()+"\r\n");
   	bfw.flush();
   	lblStatus.setText("Conectado...");
-  	lblUser.setText("Usuário: " + txtNome.getText());
+  	lblUser.setText("UsuÃ¡rio: " + txtNome.getText());
 	}
 
 	/*
-   Método usado para enviar mensagem para o server socket
-   IOException retorna uma mensagem caso dê algum erro.
+   MÃ©todo usado para enviar mensagem para o server socket
+   IOException retorna uma mensagem caso dÃª algum erro.
    */
   	public void enviarMensagem(String msg) throws IOException{
 
@@ -181,7 +181,7 @@ public class nvCliente extends JFrame implements ActionListener, KeyListener {
       		bfw.write(txtNome.getText() + " foi desconectado \r\n");
       		texto.append("Desconectado... \r\n");
       		lblStatus.setText("Desconectado...");
-      		JOptionPane.showMessageDialog(null, "Você foi desconectado!");
+      		JOptionPane.showMessageDialog(null, "VocÃª foi desconectado!");
       		
       		
     	}
@@ -194,8 +194,8 @@ public class nvCliente extends JFrame implements ActionListener, KeyListener {
 	}
 
 	/**
- * Método usado para receber mensagem do servidor
- * /throws IOException retorna IO Exception caso dê algum erro.
+ * MÃ©todo usado para receber mensagem do servidor
+ * /throws IOException retorna IO Exception caso dÃª algum erro.
  */
 	public void escutar() throws IOException{
 
@@ -217,8 +217,8 @@ public class nvCliente extends JFrame implements ActionListener, KeyListener {
 	}
 
 	/*
-    Método usado quando o usuário clica em sair
-    throws IOException retorna IO Exception caso dê algum erro.
+    MÃ©todo usado quando o usuÃ¡rio clica em sair
+    throws IOException retorna IO Exception caso dÃª algum erro.
     */
   	public void sair() throws IOException{
 
